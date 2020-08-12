@@ -1,0 +1,4 @@
+.git/
+Pipfile
+Pipfile.lock
+disquaire_project/disquaire_project/settings.py
