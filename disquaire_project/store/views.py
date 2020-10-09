@@ -29,9 +29,9 @@ def search(request):
     else:
         albums = Album.objects.filter(title__icontains=query)
         if not albums.exists():
-            albums = Album.objexts.filter(artists__name__icontains=query)
+            albums = Album.objects.filter(artists__name__icontains=query)
         if not albums.exists():
-            "Misère de misère, nous n'avons trouvé aucun résultats !"
+            message= "Misère de misère, nous n'avons trouvé aucun résultats !"
         else:
             albums = ["<li>{}</li>".format(album.title) for album in albums]
             message = """
